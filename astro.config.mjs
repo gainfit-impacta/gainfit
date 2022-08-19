@@ -1,10 +1,24 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import compress from "astro-compress";
 
-/**
- * @type {import('astro/config').AstroUserConfig}
- * @see {@link https://astro.build/config}
- */
+// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+  integrations: [
+    react(),
+    compress({
+      css: {
+        forceMediaMerge: false,
+      },
+      html: {
+        minifyURLs: true,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        useShortDoctype: true,
+      },
+      img: false,
+      svg: false,
+    }),
+  ],
 });
