@@ -1,0 +1,51 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# logs
+yarn-debug.log*
+yarn-error.log*
+
+# environment variable files
+.env.*
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/*.code-snippets
+*.code-workspace
+
+# Linux-specific files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# macOS-specific files
+._*
+.AppleDouble
+.DS_Store
+.LSOverride
+*.icloud
+Icon
+
+# Windows-specific files
+[Dd]esktop.ini
+*.lnk
+$RECYCLE.BIN/
+ehthumbs_vista.db
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable

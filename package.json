@@ -1,0 +1,31 @@
+{
+  "name": "@gainfit/frontend",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "Rafael \"rafifos\" Julio",
+    "email": "development@rafifos.dev",
+    "url": "https://rafifos.dev"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": ">=14 <=16"
+  },
+  "packageManager": "yarn@1.22.19",
+  "devDependencies": {
+    "@astrojs/react": "^1.0.0",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
+    "astro": "^1.0.6"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
