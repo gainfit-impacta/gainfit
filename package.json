@@ -15,7 +15,9 @@
     "astro": "astro"
   },
   "engines": {
-    "node": ">=14 <=16"
+    "node": ">=14 <=16",
+    "npm": "<=0.0.0",
+    "pnpm": "<=0.0.0"
   },
   "packageManager": "yarn@1.22.19",
   "devDependencies": {
