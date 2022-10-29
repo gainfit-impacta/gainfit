@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    /*
+     * If there's a `layout.tsx` file inside the new `app/` folder, it will
+     * replace both `_app.tsx` and `_document.tsx`.
+     * See: https: //beta.nextjs.org/docs/routing/pages-and-layouts#root-layout-required
+     */
+    "@next/next/no-html-link-for-pages": "off"
+  }
+}
