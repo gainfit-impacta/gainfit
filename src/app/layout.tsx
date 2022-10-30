@@ -1,4 +1,5 @@
-import "./globalStyles.css";
+import "./globals.css";
+import "./layout.styles.css";
 
 import { Inter } from "@next/font/google";
 
@@ -30,7 +31,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <title>GainFit</title>
       </head>
 
-      <body>
+      <body className="body">
         <main>{children}</main>
       </body>
     </html>

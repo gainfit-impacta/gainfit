@@ -1,0 +1,39 @@
+@layer components.gym-card {
+  .container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr;
+    grid-template-areas:
+      "image"
+      "name";
+    gap: 16px 0;
+    justify-items: start;
+    width: 180px;
+    height: 128px;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 12px;
+  }
+
+  .container:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s ease;
+  }
+
+  .image {
+    grid-area: image;
+    border-radius: 50%;
+  }
+
+  .name {
+    grid-area: name;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
