@@ -15,7 +15,7 @@
     "type-check": "tsc"
   },
   "engines": {
-    "node": "18",
+    "node": ">=16 <=18",
     "npm": "<=0",
     "yarn": ">=1"
   },
