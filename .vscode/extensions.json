@@ -1,10 +1,11 @@
 {
   "recommendations": [
-    "editorconfig.editorconfig",
-    "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
-    "me-dutour-mathieu.vscode-github-actions",
+    "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
+    "me-dutour-mathieu.vscode-github-actions",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-docker",
     "stylelint.vscode-stylelint"
   ],
   "unwantedRecommendations": []
