@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import type { Gym } from "interfaces/gym";
+import type { Gym } from "interfaces";
 
 import Image from "next/image";
 
@@ -26,4 +26,4 @@ function CardGym({ name, photo }: CardGymProps) {
   );
 }
 
-export { CardGym };
+export default CardGym;
