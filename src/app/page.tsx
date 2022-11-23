@@ -1,5 +1,3 @@
-import "./page.styles.css";
-
 function IndexPage() {
   return <></>;
 }
