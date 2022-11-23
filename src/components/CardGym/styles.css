@@ -1,0 +1,17 @@
+@layer components.cards.gym {
+  .image {
+    border-radius: 50%;
+    grid-area: image;
+  }
+
+  .name {
+    overflow: hidden;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.875rem;
+    grid-area: name;
+    line-height: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

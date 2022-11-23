@@ -5,7 +5,8 @@
     "dbaeumer.vscode-eslint",
     "me-dutour-mathieu.vscode-github-actions",
     "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "webhint.vscode-webhint"
   ],
   "unwantedRecommendations": []
 }

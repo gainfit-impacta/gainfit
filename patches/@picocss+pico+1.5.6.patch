@@ -1,0 +1,20 @@
+diff --git a/node_modules/@picocss/pico/css/pico.css b/node_modules/@picocss/pico/css/pico.css
+index f67646a..e9a1b55 100644
+--- a/node_modules/@picocss/pico/css/pico.css
++++ b/node_modules/@picocss/pico/css/pico.css
+@@ -6,6 +6,7 @@
+ /**
+  * Theme: default
+  */
++@layer picocss {
+ :root {
+   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+@@ -2655,5 +2656,5 @@ textarea,
+     transition-duration: 0s !important;
+   }
+ }
+-
++}
+ /*# sourceMappingURL=pico.css.map */
+\ No newline at end of file

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-idiomatic-order",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "rules": {
+    "plugin/selector-bem-pattern": {
+      "preset": "bem"
+    },
+    "selector-class-pattern": null,
+    "selector-id-pattern": null
+  }
+}
