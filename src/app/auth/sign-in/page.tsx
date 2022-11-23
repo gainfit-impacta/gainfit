@@ -1,9 +1,9 @@
 "use client";
 
-import type { User } from "interfaces";
+import type { User } from "@/interfaces";
 import type { SubmitHandler } from "react-hook-form";
 
-import { FormSignIn } from "components";
+import { FormSignIn } from "@/components";
 
 function SignInPage() {
   const handleSubmit: SubmitHandler<User> = (data) =>

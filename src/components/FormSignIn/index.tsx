@@ -1,4 +1,4 @@
-import type { User } from "interfaces";
+import type { User } from "@/interfaces";
 import type { SubmitHandler } from "react-hook-form";
 
 import Link from "next/link";

@@ -2,7 +2,7 @@
 
 import "./page.styles.css";
 
-import { CardGym } from "components";
+import { CardGym } from "@/components";
 
 function HomePage() {
   return (

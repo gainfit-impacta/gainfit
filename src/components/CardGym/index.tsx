@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import type { Gym } from "interfaces";
+import type { Gym } from "@/interfaces";
 
 import Image from "next/image";
 
