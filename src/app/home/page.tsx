@@ -6,7 +6,7 @@ import { CardGym } from "components";
 
 function HomePage() {
   return (
-    <>
+    <div className="container">
       <h2 className="title">Oi! John 😊</h2>
 
       <div className="last-visited">
@@ -26,7 +26,7 @@ function HomePage() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
