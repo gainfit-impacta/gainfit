@@ -1,4 +1,4 @@
-@layer pages.index {
+@layer pages.home {
   .title {
     margin-bottom: 32px;
     font-size: 2.25rem;
@@ -14,9 +14,9 @@
 
   .last-visited__header {
     display: flex;
+    height: 48px;
     align-items: center;
     justify-content: space-between;
-    height: 48px;
   }
 
   .last-visited__header > h2 {
@@ -27,10 +27,10 @@
   .last-visited__header > button {
     width: 36px;
     height: 36px;
-    cursor: pointer;
-    background-color: transparent;
     border: none;
     border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
   }
 
   .last-visited__header > button:hover {
