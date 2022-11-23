@@ -1,26 +1,4 @@
 @layer components.cards.gym {
-  .container {
-    display: grid;
-    width: 180px;
-    height: 128px;
-    padding: 16px;
-    border: 1px solid #000;
-    border-radius: 12px;
-    background-color: #fff;
-    cursor: pointer;
-    gap: 16px 0;
-    grid-template: repeat(2, 1fr) / 1fr;
-    grid-template-areas:
-      "image"
-      "name";
-    justify-items: start;
-  }
-
-  .container:hover {
-    background-color: #f5f5f5;
-    transition: all 0.2s ease;
-  }
-
   .image {
     border-radius: 50%;
     grid-area: image;

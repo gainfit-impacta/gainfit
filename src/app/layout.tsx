@@ -1,4 +1,5 @@
 import "@picocss/pico/css/pico.css";
+import "./layout.styles.css";
 
 import type { ReactNode } from "react";
 
