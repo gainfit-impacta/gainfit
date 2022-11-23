@@ -1,27 +1,15 @@
-import "./globals.css";
-import "./layout.styles.css";
+import "@picocss/pico/css/pico.css";
+
+import type { ReactNode } from "react";
 
 import { Inter } from "@next/font/google";
 
 const inter = Inter({
   display: "swap",
-  fallback: [
-    "Roboto",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Roboto",
-    "Oxygen",
-    "Ubuntu",
-    "Cantarell",
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    "sans-serif",
-  ],
   subsets: ["latin"],
 });
 
-function RootLayout({ children }: { children: React.ReactNode }) {
+function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.className}>
       <head>
@@ -31,9 +19,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <title>GainFit</title>
       </head>
 
-      <body className="body">
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
