@@ -1,9 +1,7 @@
 {
   "recommendations": [
-    "editorconfig.editorconfig",
-    "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
-    "me-dutour-mathieu.vscode-github-actions",
+    "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
     "webhint.vscode-webhint"

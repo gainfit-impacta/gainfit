@@ -1,0 +1,198 @@
+[
+  {
+    "createRule": "",
+    "deleteRule": "id = @request.auth.id",
+    "id": "_pb_users_auth_",
+    "listRule": "id = @request.auth.id",
+    "name": "users",
+    "options": {
+      "allowEmailAuth": true,
+      "allowOAuth2Auth": false,
+      "allowUsernameAuth": true,
+      "exceptEmailDomains": null,
+      "manageRule": null,
+      "minPasswordLength": 8,
+      "onlyEmailDomains": null,
+      "requireEmail": false
+    },
+    "schema": [
+      {
+        "id": "users_name",
+        "name": "name",
+        "options": {
+          "max": null,
+          "min": null,
+          "pattern": ""
+        },
+        "required": false,
+        "system": false,
+        "type": "text",
+        "unique": false
+      },
+      {
+        "id": "users_avatar",
+        "name": "avatar",
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": ["image/jpg", "image/jpeg", "image/png", "image/svg+xml", "image/gif"],
+          "thumbs": null
+        },
+        "required": false,
+        "system": false,
+        "type": "file",
+        "unique": false
+      },
+      {
+        "id": "zxaxvw4w",
+        "name": "parties",
+        "options": {
+          "cascadeDelete": true,
+          "collectionId": "dfyxdna6k5ixvrg",
+          "maxSelect": null
+        },
+        "required": false,
+        "system": false,
+        "type": "relation",
+        "unique": false
+      }
+    ],
+    "system": false,
+    "type": "auth",
+    "updateRule": "id = @request.auth.id",
+    "viewRule": "id = @request.auth.id"
+  },
+  {
+    "createRule": null,
+    "deleteRule": null,
+    "id": "dfyxdna6k5ixvrg",
+    "listRule": null,
+    "name": "parties",
+    "options": {},
+    "schema": [
+      {
+        "id": "b34ctlb3",
+        "name": "name",
+        "options": {
+          "max": null,
+          "min": null,
+          "pattern": "^\\w+$"
+        },
+        "required": true,
+        "system": false,
+        "type": "text",
+        "unique": false
+      },
+      {
+        "id": "mmzzehk6",
+        "name": "users",
+        "options": {
+          "cascadeDelete": false,
+          "collectionId": "_pb_users_auth_",
+          "maxSelect": 8
+        },
+        "required": false,
+        "system": false,
+        "type": "relation",
+        "unique": false
+      }
+    ],
+    "system": false,
+    "type": "base",
+    "updateRule": null,
+    "viewRule": null
+  },
+  {
+    "createRule": null,
+    "deleteRule": null,
+    "id": "5x61d9khu8xdxqs",
+    "listRule": null,
+    "name": "gyms",
+    "options": {},
+    "schema": [
+      {
+        "id": "52d3dyom",
+        "name": "name",
+        "options": {
+          "max": null,
+          "min": null,
+          "pattern": "^\\w+$"
+        },
+        "required": true,
+        "system": false,
+        "type": "text",
+        "unique": false
+      },
+      {
+        "id": "dxpqr2c0",
+        "name": "brand_image",
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": ["image/jpg", "image/jpeg", "image/png", "image/svg+xml", "image/gif"],
+          "thumbs": []
+        },
+        "required": false,
+        "system": false,
+        "type": "file",
+        "unique": false
+      },
+      {
+        "id": "4qnyppey",
+        "name": "address",
+        "options": {
+          "max": null,
+          "min": null,
+          "pattern": "^\\w+$"
+        },
+        "required": true,
+        "system": false,
+        "type": "text",
+        "unique": true
+      }
+    ],
+    "system": false,
+    "type": "base",
+    "updateRule": null,
+    "viewRule": null
+  },
+  {
+    "createRule": null,
+    "deleteRule": null,
+    "id": "bba9zjpi9m6t5a1",
+    "listRule": null,
+    "name": "rounds",
+    "options": {},
+    "schema": [
+      {
+        "id": "qh1ew77k",
+        "name": "party",
+        "options": {
+          "cascadeDelete": true,
+          "collectionId": "dfyxdna6k5ixvrg",
+          "maxSelect": 1
+        },
+        "required": true,
+        "system": false,
+        "type": "relation",
+        "unique": false
+      },
+      {
+        "id": "rxssw6xk",
+        "name": "expired",
+        "options": {
+          "max": "",
+          "min": ""
+        },
+        "required": true,
+        "system": false,
+        "type": "date",
+        "unique": false
+      }
+    ],
+    "system": false,
+    "type": "base",
+    "updateRule": null,
+    "viewRule": null
+  }
+]
