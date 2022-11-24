@@ -1,11 +1,11 @@
-import type { User } from "interfaces";
+import type { UserSignInFormData } from "@/interfaces/user";
 import type { SubmitHandler } from "react-hook-form";
 
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 interface FormSignInProps {
-  onSubmit: SubmitHandler<User>;
+  onSubmit: SubmitHandler<UserSignInFormData>;
 }
 
 function FormSignIn({ onSubmit }: FormSignInProps) {
@@ -13,7 +13,7 @@ function FormSignIn({ onSubmit }: FormSignInProps) {
     register,
     handleSubmit,
     formState: { isSubmitting, errors },
-  } = useForm<User>();
+  } = useForm<UserSignInFormData>();
 
   return (
     <>

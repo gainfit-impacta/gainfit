@@ -20,7 +20,7 @@
 *.pem
 
 # PobketBase database
-*.db
+/db/data
 
 # debug
 npm-debug.log*

@@ -1,7 +1,18 @@
-interface User {
+type User = {
   name: string;
   email: string;
-  password?: string;
+  password: string;
+  avatar?: string;
+};
+
+interface UserSignInFormData extends Omit<User, "name"> {}
+
+interface UserSignUpFormData extends User {
+  passwordConfirm: string;
 }
 
-export type { User };
+interface UserState extends User {
+  isLoggedIn: boolean;
+}
+
+export type { User, UserSignInFormData, UserSignUpFormData, UserState };
