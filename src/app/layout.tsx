@@ -3,7 +3,11 @@ import "./layout.styles.css";
 
 import type { ReactNode } from "react";
 
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { Inter } from "@next/font/google";
+
+import { getUserSSR } from "@/lib/user";
 
 const inter = Inter({
   display: "swap",
@@ -11,6 +15,12 @@ const inter = Inter({
 });
 
 function RootLayout({ children }: { children: ReactNode }) {
+  const user = getUserSSR(cookies());
+
+  if (!user) {
+    redirect("/auth/sign-in");
+  }
+
   return (
     <html lang="pt-BR" className={inter.className}>
       <head>

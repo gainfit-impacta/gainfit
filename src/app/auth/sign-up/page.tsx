@@ -1,18 +1,24 @@
 "use client";
 
-import type { User } from "@/interfaces";
+import type { UserSignUpFormData } from "@/interfaces/user";
 import type { SubmitHandler } from "react-hook-form";
 
-import { FormSignUp } from "@/components";
+import { useRouter } from "next/navigation";
+
+import FormSignUp from "@/components/FormSignUp";
+import { pocketbase } from "@/lib/pocketbase";
 
 function SignUpPage() {
-  const handleSubmit: SubmitHandler<User> = (data) =>
-    new Promise<void>((resolve) => {
-      setTimeout(() => {
-        console.log(data);
-        resolve();
-      }, 2000);
-    });
+  const router = useRouter();
+
+  const handleSubmit: SubmitHandler<UserSignUpFormData> = async (data) => {
+    try {
+      await pocketbase.collection("users").create(data);
+      router.push("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
