@@ -2,4 +2,10 @@
  * Establish a layer order up-front, from lowest to highest priority
  * See: https://css-tricks.com/css-cascade-layers
  */
-@layer picocss, pages, components, utilities, overrides;
+@layer picocss, layouts, pages, components, utilities, overrides;
+
+@layer layouts.base {
+  .logo {
+    font-size: var(--font-size);
+  }
+}
