@@ -104,7 +104,7 @@ function FormSignUp({ onSubmit }: FormSignUpProps) {
       </form>
 
       <small>
-        Já tem uma conta? <Link href="/auth/sign-in">Entre</Link>
+        Já tem uma conta? <Link href="/entrar">Entre</Link>
       </small>
     </>
   );

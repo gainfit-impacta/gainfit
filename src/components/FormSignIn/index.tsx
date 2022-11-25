@@ -63,7 +63,7 @@ function FormSignIn({ onSubmit }: FormSignInProps) {
       </form>
 
       <small>
-        Não tem uma conta? <Link href="/auth/sign-up">Cadastre-se</Link>
+        Não tem uma conta? <Link href="/cadastrar">Cadastre-se</Link>
       </small>
     </>
   );

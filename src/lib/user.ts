@@ -1,5 +1,7 @@
-import { ReadonlyRequestCookies } from "next/dist/server/app-render";
 import type { User } from "@/interfaces/user";
+
+import { cookies } from "next/headers";
+
 import { pocketbase } from "@/lib/pocketbase";
 
 function getUser(): User {
@@ -8,20 +10,14 @@ function getUser(): User {
 
 /**
  * Can be called in page/layout server component.
- * @param cookies ReadonlyRequestCookies
- * @returns User
+ * @returns User or null
  * @author Arif "poltang" Muslax
  * @see {@link https://github.com/vvo/iron-session/issues/560#issuecomment-1324598048 }
  */
-function getUserSSR(cookies: ReadonlyRequestCookies): User {
-  const authCookie = cookies.get("pb_auth");
+function getUserSSR(): User | null {
+  const authCookie = cookies().get("pb_auth");
 
-  if (!authCookie)
-    return {
-      name: "",
-      email: "",
-      password: "",
-    };
+  if (!authCookie) return null;
 
   pocketbase.authStore.loadFromCookie(`${authCookie.name}=${authCookie.value}`);
   const user = pocketbase.authStore.model;

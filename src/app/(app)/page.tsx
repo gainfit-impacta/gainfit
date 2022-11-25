@@ -1,16 +1,14 @@
 import "./page.styles.css";
 
-import { cookies } from "next/headers";
-
 import CardGym from "@/components/CardGym";
 import { getUserSSR } from "@/lib/user";
 
 async function HomePage() {
-  const { name } = getUserSSR(cookies());
+  const user = getUserSSR();
 
   return (
     <div className="container">
-      <h2 className="title">Oi! {name} 😊</h2>
+      <h2 className="title">Oi! {user?.name} 😊</h2>
 
       <div className="last-visited">
         <div className="last-visited__header">
