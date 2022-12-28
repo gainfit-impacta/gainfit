@@ -98,8 +98,8 @@ function FormSignUp({ onSubmit }: FormSignUpProps) {
           )}
         </label>
 
-        <button type="submit" aria-busy={isSubmitting}>
-          Entrar
+        <button type="submit" disabled={isSubmitting} aria-busy={isSubmitting}>
+          Cadastrar
         </button>
       </form>
 

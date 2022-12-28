@@ -30,7 +30,7 @@ function FormSignIn({ onSubmit }: FormSignInProps) {
           />
           {errors.email && (
             <span role="alert" className="input--error">
-              {errors.email.message}
+              {errors.email.message as string}
             </span>
           )}
         </label>
@@ -57,7 +57,7 @@ function FormSignIn({ onSubmit }: FormSignInProps) {
           )}
         </label>
 
-        <button type="submit" aria-busy={isSubmitting}>
+        <button type="submit" disabled={isSubmitting} aria-busy={isSubmitting}>
           Entrar
         </button>
       </form>
