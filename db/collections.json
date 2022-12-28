@@ -1,14 +1,15 @@
 [
   {
     "createRule": "",
-    "deleteRule": "id = @request.auth.id",
+    "deleteRule": null,
     "id": "_pb_users_auth_",
-    "listRule": "id = @request.auth.id",
+    "listRule": null,
     "name": "users",
     "options": {
       "allowEmailAuth": true,
       "allowOAuth2Auth": false,
-      "allowUsernameAuth": true,
+      "allowUsernameAuth": false,
+      "emailVisibility": true,
       "exceptEmailDomains": null,
       "manageRule": null,
       "minPasswordLength": 8,
@@ -42,31 +43,18 @@
         "system": false,
         "type": "file",
         "unique": false
-      },
-      {
-        "id": "zxaxvw4w",
-        "name": "parties",
-        "options": {
-          "cascadeDelete": true,
-          "collectionId": "dfyxdna6k5ixvrg",
-          "maxSelect": null
-        },
-        "required": false,
-        "system": false,
-        "type": "relation",
-        "unique": false
       }
     ],
     "system": false,
     "type": "auth",
-    "updateRule": "id = @request.auth.id",
-    "viewRule": "id = @request.auth.id"
+    "updateRule": "",
+    "viewRule": ""
   },
   {
-    "createRule": null,
+    "createRule": "@request.auth.id != \"\"",
     "deleteRule": null,
     "id": "dfyxdna6k5ixvrg",
-    "listRule": null,
+    "listRule": "@request.auth.id != \"\"",
     "name": "parties",
     "options": {},
     "schema": [
@@ -95,18 +83,30 @@
         "system": false,
         "type": "relation",
         "unique": false
+      },
+      {
+        "id": "ikm9fosc",
+        "name": "expired",
+        "options": {
+          "max": "",
+          "min": ""
+        },
+        "required": true,
+        "system": false,
+        "type": "date",
+        "unique": false
       }
     ],
     "system": false,
     "type": "base",
-    "updateRule": null,
-    "viewRule": null
+    "updateRule": "@request.auth.id != \"\"",
+    "viewRule": "@request.auth.id != \"\""
   },
   {
     "createRule": null,
     "deleteRule": null,
     "id": "5x61d9khu8xdxqs",
-    "listRule": null,
+    "listRule": "@request.auth.id != \"\"",
     "name": "gyms",
     "options": {},
     "schema": [
@@ -125,7 +125,7 @@
       },
       {
         "id": "dxpqr2c0",
-        "name": "brand_image",
+        "name": "brandImage",
         "options": {
           "maxSelect": 1,
           "maxSize": 5242880,
@@ -174,46 +174,7 @@
     "system": false,
     "type": "base",
     "updateRule": null,
-    "viewRule": null
-  },
-  {
-    "createRule": null,
-    "deleteRule": null,
-    "id": "bba9zjpi9m6t5a1",
-    "listRule": null,
-    "name": "rounds",
-    "options": {},
-    "schema": [
-      {
-        "id": "qh1ew77k",
-        "name": "party",
-        "options": {
-          "cascadeDelete": true,
-          "collectionId": "dfyxdna6k5ixvrg",
-          "maxSelect": 1
-        },
-        "required": true,
-        "system": false,
-        "type": "relation",
-        "unique": false
-      },
-      {
-        "id": "rxssw6xk",
-        "name": "expired",
-        "options": {
-          "max": "",
-          "min": ""
-        },
-        "required": true,
-        "system": false,
-        "type": "date",
-        "unique": false
-      }
-    ],
-    "system": false,
-    "type": "base",
-    "updateRule": null,
-    "viewRule": null
+    "viewRule": "@request.auth.id != \"\""
   },
   {
     "createRule": null,
@@ -225,7 +186,7 @@
     "schema": [
       {
         "id": "ycagqlzw",
-        "name": "users",
+        "name": "user",
         "options": {
           "cascadeDelete": true,
           "collectionId": "_pb_users_auth_",
@@ -238,7 +199,7 @@
       },
       {
         "id": "h3zroubh",
-        "name": "gyms",
+        "name": "gym",
         "options": {
           "cascadeDelete": true,
           "collectionId": "5x61d9khu8xdxqs",
