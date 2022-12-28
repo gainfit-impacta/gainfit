@@ -1,27 +1,37 @@
+"use client";
+
 import "./styles.css";
 
 import type { Gym } from "@/interfaces/gym";
 
 import Image from "next/image";
 
-interface CardGymProps extends Pick<Gym, "name" | "photo"> {}
+import { createCheckin } from "@/lib/checkin";
+import { mountFileUrl } from "@/lib/pocketbase";
+import { getUser } from "@/lib/user";
 
-function CardGym({ name, photo }: CardGymProps) {
-  const placeholderUrl = `https://via.placeholder.com/64.png?text=${name[0]}`;
+interface CardGymProps extends Pick<Gym, "id" | "name" | "brandImage"> {}
+
+function CardGym({ id, name, brandImage }: CardGymProps) {
+  const user = getUser();
+
+  const brandImageUrl = brandImage
+    ? mountFileUrl("gyms", id as string, brandImage)
+    : `https://via.placeholder.com/64.png?text=${name[0]}`;
+
+  const handleClick = async () => {
+    await createCheckin(id as string, user.id as string);
+  };
 
   return (
-    <article>
-      <button className="container" type="button" title={name}>
-        <Image
-          src={typeof photo !== "string" ? placeholderUrl : photo}
-          alt={name}
-          width={64}
-          height={64}
-          className="image"
-        />
+    <article className="card-gym" onClick={handleClick}>
+      <Image src={brandImageUrl} alt={name} width={64} height={64} className="card-gym__image" />
 
-        <h1 className="name">{name}</h1>
-      </button>
+      <div className="card-gym__content">
+        <h1 className="card-gym__name" title={name}>
+          {name}
+        </h1>
+      </div>
     </article>
   );
 }

@@ -1,15 +1,49 @@
 @layer components.cards.gym {
-  .image {
-    border-radius: 50%;
-    grid-area: image;
+  .card-gym {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    align-items: center;
+
+    width: 192px;
+    min-width: 192px;
+    max-width: 192px;
+    margin: 0;
+    padding: var(--spacing);
   }
 
-  .name {
+  .card-gym:hover {
+    cursor: pointer;
+    background-color: var(--card-border-color);
+  }
+
+  .card-gym h1 {
+    margin: 0;
+  }
+
+  .card-gym__image {
+    grid-area: image;
+
+    width: 64px;
+    height: 64px;
+
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .card-gym__content {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .card-gym__name {
     overflow: hidden;
+    grid-area: name;
+
     min-width: 0;
     max-width: 100%;
+
     font-size: 0.875rem;
-    grid-area: name;
     line-height: 1.25rem;
     text-overflow: ellipsis;
     white-space: nowrap;
