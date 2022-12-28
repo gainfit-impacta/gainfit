@@ -6,14 +6,14 @@ import type { SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
 import FormSignUp from "@/components/FormSignUp";
-import { pocketbase } from "@/lib/pocketbase";
+import { signup } from "@/lib/pocketbase";
 
-function SignUpPage() {
+function SignInPage() {
   const router = useRouter();
 
   const handleSubmit: SubmitHandler<UserSignUpFormData> = async (data) => {
     try {
-      await pocketbase.collection("users").create(data);
+      await signup(data);
       router.push("/");
     } catch (error) {
       console.error(error);
@@ -31,4 +31,4 @@ function SignUpPage() {
   );
 }
 
-export default SignUpPage;
+export default SignInPage;

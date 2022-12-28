@@ -5,15 +5,17 @@ import type { SubmitHandler } from "react-hook-form";
 
 import { useRouter } from "next/navigation";
 
-import FormSignIn from "@/components/FormSignIn";
-import { pocketbase } from "@/lib/pocketbase";
+import FormEnterParty from "@/components/FormEnterParty";
+import { enterParty } from "@/lib/party";
+import { getUser } from "@/lib/user";
 
 function SignInPage() {
   const router = useRouter();
+  const user = getUser();
 
   const handleSubmit: SubmitHandler<UserSignInFormData> = async (data) => {
     try {
-      await pocketbase.collection("users").authWithPassword(data.email, data.password);
+      await enterParty(data, user.id as string);
       router.push("/");
     } catch (error) {
       console.error(error);
@@ -22,10 +24,10 @@ function SignInPage() {
 
   return (
     <>
-      <h2 className="title">Entre com a sua conta</h2>
+      <h2 className="title">Entrar em um grupo</h2>
 
       <article>
-        <FormSignIn onSubmit={handleSubmit} />
+        <FormEnterParty onSubmit={handleSubmit} />
       </article>
     </>
   );

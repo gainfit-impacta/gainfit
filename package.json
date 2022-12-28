@@ -27,8 +27,10 @@
     "@picocss/pico": "^1.5.6",
     "envalid": "^7.3.1",
     "next": "^13.0.4",
+    "phosphor-icons": "^1.4.2",
     "pocketbase": "^0.8.0",
     "react": "^18.2.0",
+    "react-countdown": "^2.3.5",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.39.5"
   },

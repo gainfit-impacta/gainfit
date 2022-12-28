@@ -5,6 +5,10 @@
 @layer picocss, layouts, pages, components, utilities, overrides;
 
 @layer layouts.base {
+  body {
+    scroll-behavior: smooth;
+  }
+
   .logo {
     font-size: var(--font-size);
   }

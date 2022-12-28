@@ -1,0 +1,13 @@
+@layer pages.group.page {
+  h1 {
+    margin: 0;
+  }
+
+  .countdown {
+    margin: calc(var(--spacing) * 2) 0;
+  }
+
+  .countdown > span {
+    font-weight: bold;
+  }
+}
