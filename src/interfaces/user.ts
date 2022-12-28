@@ -1,9 +1,11 @@
-type User = {
+import type { Record } from "pocketbase";
+
+interface User extends Partial<Record> {
   name: string;
   email: string;
   password: string;
   avatar?: string;
-};
+}
 
 interface UserSignInFormData extends Omit<User, "name"> {}
 

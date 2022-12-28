@@ -1,12 +1,10 @@
-interface Gym {
+import type { Record } from "pocketbase";
+
+interface Gym extends Partial<Record> {
   name: string;
-  photo?: string;
+  description?: string;
+  brandImage?: string;
   address: string;
-  phone: string;
-  website?: string;
-  hours?: string;
-  lat: string;
-  lng: string;
 }
 
 export type { Gym };
