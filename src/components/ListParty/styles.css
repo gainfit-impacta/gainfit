@@ -1,0 +1,66 @@
+@layer components.lists.gym {
+  .list-party {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .list-party__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+  }
+
+  .list-party__header > h2 {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  .list-party__header > button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
+
+  .list-party__header > button:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s ease;
+  }
+
+  .list-party__header > button > i {
+    color: var(--h2-color);
+  }
+
+  .list-party__list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .list-party__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin-right: var(--grid-spacing-horizontal);
+  }
+
+  .list-party__button {
+    display: flex;
+    gap: calc(var(--grid-spacing-horizontal) / 3);
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+  }
+}
