@@ -1,0 +1,49 @@
+@layer components.lists.gym {
+  .list-gym {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .list-gym__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+  }
+
+  .list-gym__header > h2 {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  .list-gym__header > button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
+
+  .list-gym__header > button:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s ease;
+  }
+
+  .list-gym__header > button > i {
+    color: var(--h2-color);
+  }
+
+  .list-gym__list {
+    display: flex;
+    gap: 16px;
+  }
+}
