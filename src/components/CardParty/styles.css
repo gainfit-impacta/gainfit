@@ -1,0 +1,32 @@
+@layer cards.party {
+  .card-party {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    align-items: center;
+    justify-content: center;
+
+    min-width: 96px;
+    height: 128px;
+    margin: var(--block-spacing-vertical) 0;
+
+    text-decoration: none;
+
+    background: var(--card-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+  }
+
+  .card-party:hover {
+    cursor: pointer;
+    background-color: var(--card-border-color);
+  }
+
+  .card-party h1 {
+    margin: 0;
+  }
+
+  .card-party a {
+    text-decoration: none;
+  }
+}
